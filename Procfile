@@ -1,1 +1,1 @@
-web: gunicorn manage:app
+web: gunicorn vote_app:app
