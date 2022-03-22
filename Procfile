@@ -1,1 +1,1 @@
-web: gunicorn vote_app:app
+web: gunicorn gettingstarted.wsgi
