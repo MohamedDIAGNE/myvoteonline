@@ -1,0 +1,17 @@
+{% extends 'election/base.html' %}
+
+{% block content %}
+    <ul>
+        {% for conseil in object_list %}
+            <li>{{ conseil.user.get_full_name }}</li>
+        {% empty %}
+            <p>Il n'y a pas encore de membre du conseil!</p>
+        {% endfor %}
+    </ul>
+
+    <div>
+        <a href="{% url 'election:ajout_conseil' %}">Ajouter un membre</a>
+    </div>
+
+{% endblock %}
+

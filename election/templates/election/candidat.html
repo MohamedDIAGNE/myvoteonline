@@ -1,0 +1,20 @@
+<h3>Détail du candidat : {{ candidat.parti }}</h3>
+
+<table>
+    <thead>
+        <th>Parti</th>
+        <th>Date de naissance</th>
+        <th>Slogan</th>
+        <th>Programme</th>
+        <th>Nombre de voix obtenues</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ candidat.parti }}</td>
+            <td>{{ candidat.date_naissance|date:"d-m-Y" }}</td>
+            <td>{{ candidat.slogan }}</td>
+            <td>{{ candidat.programme }}</td>
+            <td>{{ candidat.nb_voix }}</td>
+        </tr>
+    </tbody>
+</table>

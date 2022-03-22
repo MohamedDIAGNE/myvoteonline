@@ -1,0 +1,9 @@
+{% extends 'election/base.html' %}
+
+{% block content %}
+    <form action="{% url 'election:vote' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Je vote!">
+    </form>
+{% endblock %}

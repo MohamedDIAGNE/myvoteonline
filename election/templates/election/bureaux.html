@@ -1,0 +1,24 @@
+{% extends 'election/base.html' %}
+
+{% block content %}
+<h2>Liste des bureaux de vote</h2>
+
+<table>
+    <tr>
+        <th>Identifiant</th>
+        <th>Nom du bureau</th>
+        <th>Lieu</th>
+    </tr>
+    {% for bureau in bureaux %}
+    <tr>
+        <td>{{ bureau.pk }}</td>
+        <td>{{ bureau.nom }}</td>
+        <td>{{ bureau.lieu }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div>
+    <a href="{% url 'election:ajout_bureau' %}">Ajouter un nouveau bureau</a>
+</div>
+{% endblock %}

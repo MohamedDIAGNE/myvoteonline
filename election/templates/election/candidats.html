@@ -1,0 +1,32 @@
+{% extends 'election/base.html' %}
+
+{% block content %}
+<h2>Liste des candidats</h2>
+
+<table>
+    <thead>
+        <th>Identifiant</th>
+        <th>Parti</th>
+        <th>Slogan</th>
+        <th>Nombre de voix</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        {% for candidat in liste %}
+            <tr>
+                <td>{{ candidat.pk }}</td>
+                <td>{{ candidat.parti }}</td>
+                <td>{{ candidat.slogan }}</td>
+                <td>{{ candidat.nb_voix }}</td>
+                <td><a href="{% url 'election:detail_candidat' candidat.pk %}">Voir détails</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div>
+    <a href="{% url 'election:ajout_candidat' %}">Ajouter un candidat</a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'election/base.html' %}
+
+{% block content %}
+<h2>Liste des électeurs</h2>
+
+<table>
+    <tr>
+        <th>Nom complet</th>
+        <th>Numéro CNI</th>
+        <th>Date de naissance</th>
+        <th>Lieu de naissance</th>
+        <th>A voté</th>
+        <th>Bureau de vote</th>
+    </tr>
+    {% for electeur in electeurs %}
+    <tr>
+        <td>{{ electeur.user.get_full_name }}</td>
+        <td>{{ electeur.numero_cni }}</td>
+        <td>{{ electeur.date_naissance|date:"d-m-Y" }}</td>
+        <td>{{ electeur.lieu_naissance }}</td>
+        <td>{{ electeur.a_vote|yesno:"Oui,Non,Peut-être" }}</td>
+        <td>{{ electeur.bureau.nom }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div>
+    <a href="{% url 'election:ajout_electeur' %}">Ajouter un électeur</a>
+</div>
+
+{% endblock %}

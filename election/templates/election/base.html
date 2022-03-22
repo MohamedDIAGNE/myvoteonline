@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+    <title>Vote app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Vote 2019</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'election:liste_candidats' %}">Accueil <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'election:liste_electeurs' %}">Electeurs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'election:liste_conseils' %}">Membres du conseil constitutionnel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'election:liste_bureaux' %}">Bureaux</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'election:vote' %}">Je vote!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'election:resultats' %}">Resultats provisoires</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+{% block content %}
+
+{% endblock %}
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="https://www.esmt.sn"> LPTI3 - ESMT</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

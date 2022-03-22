@@ -1,0 +1,16 @@
+{% extends 'election/base.html' %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Parti du Candidat</th>
+            <th>Nombre de voix obtenues</th>
+        </tr>
+        {% for candidat in object_list %}
+        <tr>
+            <td>{{ candidat.parti }}</td>
+            <td>{{ candidat.nb_voix }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
