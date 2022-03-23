@@ -25,7 +25,7 @@ SECRET_KEY = '6)=i@4#7wv1=!hmusma^7@@d$4i*^(p01%y$3@hviku!gv#4vi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','myvoteonline.herokuapp.com']
 
 
 # Application definition
