@@ -1,4 +1,4 @@
-# application vote en ligne
+# application de vote en ligne
 
 ## Création d'un environnement virtuel sous windows
 
