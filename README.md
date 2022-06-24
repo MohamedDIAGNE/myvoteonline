@@ -1,4 +1,4 @@
-# LPTI 3 - Programmation web avancée
+# application vote en ligne
 
 ## Création d'un environnement virtuel sous windows
 
